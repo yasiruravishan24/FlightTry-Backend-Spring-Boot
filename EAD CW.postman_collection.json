@@ -1,0 +1,917 @@
+{
+	"info": {
+		"_postman_id": "c9b9bef9-eb48-451b-90c9-fd05be6b8f47",
+		"name": "EAD CW",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17106210"
+	},
+	"item": [
+		{
+			"name": "apiuser",
+			"item": [
+				{
+					"name": "VerifyApiKey",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8081/v1/api-users/verify-key?apikey=yxO4z9PC0lX2UGsvm6zeauOir5OQMl3FBRuauCqc84z6LnUcgS",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8081",
+							"path": [
+								"v1",
+								"api-users",
+								"verify-key"
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "yxO4z9PC0lX2UGsvm6zeauOir5OQMl3FBRuauCqc84z6LnUcgS"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get All Api users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8081/v1/api-users",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8081",
+							"path": [
+								"v1",
+								"api-users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createApiUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"f_name\" : \"test\",\r\n    \"l_name\" : \"user\",\r\n    \"email\" : \"test@gmail.com\",\r\n    \"host\" : \"127.0.0.1:8082\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8081/v1/api-users",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8081",
+							"path": [
+								"v1",
+								"api-users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateStatus",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\" : false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8081/v1/api-users/status/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8081",
+							"path": [
+								"v1",
+								"api-users",
+								"status",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUsage",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8081/v1/api-users/usage/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8081",
+							"path": [
+								"v1",
+								"api-users",
+								"usage",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "checkHost",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8081/v1/api-users/host?host=127.0.0.1:8082",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8081",
+							"path": [
+								"v1",
+								"api-users",
+								"host"
+							],
+							"query": [
+								{
+									"key": "host",
+									"value": "127.0.0.1:8082"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "checkEmail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8081/v1/api-users/email?email=test@gmail.com",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8081",
+							"path": [
+								"v1",
+								"api-users",
+								"email"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "test@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "airport",
+			"item": [
+				{
+					"name": "getAirpots",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/v1/airports",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"airports"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAirpotBycode",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/v1/airports/code?code=ATL",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"airports",
+								"code"
+							],
+							"query": [
+								{
+									"key": "code",
+									"value": "ATL"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAirPortByCountry",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/v1/airports/country?country=United States",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"airports",
+								"country"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "United States"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAirportByName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/v1/airports/name?name=Hartsfield Jackson Atlanta Intl",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"airports",
+								"name"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Hartsfield Jackson Atlanta Intl"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "flight",
+			"item": [
+				{
+					"name": "getFlights",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "http://localhost:3000",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8082/v1/flights?apikey=UyV3zhmD1leqsm3JuqQtyOykaVVTqgRY30GaG9KOUatyQ9Lea3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8082",
+							"path": [
+								"v1",
+								"flights"
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "UyV3zhmD1leqsm3JuqQtyOykaVVTqgRY30GaG9KOUatyQ9Lea3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllFlights",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8082/v1/all-flights",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8082",
+							"path": [
+								"v1",
+								"all-flights"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getFlightByIdAdmin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8082/v1/flights/5",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8082",
+							"path": [
+								"v1",
+								"flights",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getFlightById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "http://localhost:3000",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8082/v1/flight/5?apikey=UyV3zhmD1leqsm3JuqQtyOykaVVTqgRY30GaG9KOUatyQ9Lea3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8082",
+							"path": [
+								"v1",
+								"flight",
+								"5"
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "UyV3zhmD1leqsm3JuqQtyOykaVVTqgRY30GaG9KOUatyQ9Lea3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createFlight",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {   \r\n        \"flight_date\" : \"2020-01-01\",\r\n        \"flight_status\" : null,\r\n        \"airline_name\" : \"nova\",\r\n        \"airline_iata\" : \"AA\",\r\n        \"aircraft_iata\" : \"AA\",\r\n        \"segments\" : [\r\n            {\r\n                \"segment_type\" : \"departure\",\r\n                \"segment_order\" : 2,\r\n                \"airport\": \"San Francisco International\",\r\n                \"city\": \"Atlanta\",\r\n                \"country\": \"United States\",\r\n                \"lat\": 33.636719,\r\n                \"lng\": -84.428067,\r\n                \"iata\": \"SFO\"\r\n            },\r\n            {\r\n                \"segment_type\" : \"arrival\",\r\n                \"segment_order\" : 1,\r\n                \"airport\": \"Dallas/Fort Worth International\",\r\n                \"city\": \"Atlanta\",\r\n                \"country\": \"United States\",\r\n                \"lat\": 33.636719,\r\n                \"lng\": -84.428067,\r\n                \"iata\": \"DFW\"\r\n            }\r\n        ]\r\n    }\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8082/v1/flights",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8082",
+							"path": [
+								"v1",
+								"flights"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateFlight",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {  \r\n        \"flight_iata\" : \"AA\",\r\n        \"flight_icao\" : \"AA1\",\r\n        \"flight_codeshared\" : null,\r\n        \"flight_date\" : \"2020-01-01\",\r\n        \"flight_status\" : null,\r\n        \"airline_name\" : \"nova\",\r\n        \"airline_company_name\" : \"nova pvt\",\r\n        \"airline_iata\" : \"AA111111\",\r\n        \"airline_icao\" : \"AA1\",\r\n        \"aircraft_registration\" : \"N0012\",\r\n        \"aircraft_iata\" : \"AA\",\r\n        \"aircraft_icao\" : \"AA1\",\r\n        \"segments\" : [\r\n            {\r\n                \"segment_type\" : \"departure\",\r\n                \"segment_order\" : 2,\r\n                \"airport\": \"San Francisco International\",\r\n                \"city\": \"Atlanta\",\r\n                \"country\": \"United States\",\r\n                \"lat\": 33.636719,\r\n                \"lng\": -84.428067,\r\n                \"iata\": \"SFO11111\",\r\n                \"icao\": \"KSFO\",\r\n                \"timeZone\": \"America/Los_Angeles\",\r\n                \"terminal\": \"1\",\r\n                \"gate\": \"D11\",\r\n                \"baggage\": null,\r\n                \"delay\": 13,\r\n                \"scheduled\": \"2019-12-12T04:20:00+00:00\",\r\n                \"estimated\": \"2019-12-12T04:20:00+00:00\",\r\n                \"actual\": \"2019-12-12T04:20:13+00:00\",\r\n                \"estimated_runway\": \"2019-12-12T04:20:13+00:00\",\r\n                \"actual_runway\": \"2019-12-12T04:20:13+00:00\"\r\n            },\r\n            {\r\n                \"segment_type\" : \"arrival\",\r\n                \"segment_order\" : 1,\r\n                \"airport\": \"Dallas/Fort Worth International\",\r\n                \"city\": \"Atlanta\",\r\n                \"country\": \"United States\",\r\n                \"lat\": 33.636719,\r\n                \"lng\": -84.428067,\r\n                \"iata\": \"DFW111111\",\r\n                \"icao\": \"KDFW\",\r\n                \"timeZone\": \"America/Chicago\",\r\n                \"terminal\": \"A\",\r\n                \"gate\": \"A22\",\r\n                \"baggage\": \"A17\",\r\n                \"delay\": 0,\r\n                \"scheduled\": \"2019-12-12T04:20:00+00:00\",\r\n                \"estimated\": \"2019-12-12T04:20:00+00:00\",\r\n                \"actual\": null,\r\n                \"estimated_runway\": null,\r\n                \"actual_runway\": null\r\n            }\r\n        ]\r\n    }\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8082/v1/flights/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8082",
+							"path": [
+								"v1",
+								"flights",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAirports",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8082/v1/airports?apikey=Wr0PVftH64SbJq01bJKx63x7MtbIVX14Xlx1XFouFyGtwu237X",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8082",
+							"path": [
+								"v1",
+								"airports"
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "Wr0PVftH64SbJq01bJKx63x7MtbIVX14Xlx1XFouFyGtwu237X"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteFlight",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8082/v1/flights/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8082",
+							"path": [
+								"v1",
+								"flights",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAirpotByCode",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "http://localhost:3000/",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8082/v1/airports/code?apikey=Wr0PVftH64SbJq01bJKx63x7MtbIVX14Xlx1XFouFyGtwu237X&code=ADD",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8082",
+							"path": [
+								"v1",
+								"airports",
+								"code"
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "Wr0PVftH64SbJq01bJKx63x7MtbIVX14Xlx1XFouFyGtwu237X"
+								},
+								{
+									"key": "code",
+									"value": "ADD"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAirpotByCountry",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "http://localhost:3000/",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8082/v1/airports/country?apikey=Wr0PVftH64SbJq01bJKx63x7MtbIVX14Xlx1XFouFyGtwu237X&country=China",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8082",
+							"path": [
+								"v1",
+								"airports",
+								"country"
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "Wr0PVftH64SbJq01bJKx63x7MtbIVX14Xlx1XFouFyGtwu237X"
+								},
+								{
+									"key": "country",
+									"value": "China"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAirportByName",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "http://localhost:3000/",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8082/v1/airports/name?apikey=Wr0PVftH64SbJq01bJKx63x7MtbIVX14Xlx1XFouFyGtwu237X&name=Capital Intl",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8082",
+							"path": [
+								"v1",
+								"airports",
+								"name"
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "Wr0PVftH64SbJq01bJKx63x7MtbIVX14Xlx1XFouFyGtwu237X"
+								},
+								{
+									"key": "name",
+									"value": "Capital Intl"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "mail",
+			"item": [
+				{
+					"name": "sendEmail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"test\",\r\n    \"email\" : \"test@gmail.com\",\r\n    \"subject\" : \"subject\",\r\n    \"body\" : \"hello World\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8083/v1/mails",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8083",
+							"path": [
+								"v1",
+								"mails"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "verify",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "ZAe99b6AiLhl58YyicWgztbthU7ZsAI5gjBOBy8rL4iME3DyNI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8084/v1/admins/verify",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8084",
+							"path": [
+								"v1",
+								"admins",
+								"verify"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "4321",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"test\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8084/v1/admins/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8084",
+							"path": [
+								"v1",
+								"admins",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "ZAe99b6AiLhl58YyicWgztbthU7ZsAI5gjBOBy8rL4iME3DyNI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"test\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8084/v1/admins/logout",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8084",
+							"path": [
+								"v1",
+								"admins",
+								"logout"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "4xnOC7asKUGaxCG5Qzn7TqpJzzoXADeyCBXASk16cZfdv9yKYY",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
